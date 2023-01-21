@@ -60,7 +60,7 @@ content:
       - title: Full-Custom Design Layout for Arbiter with Multiplier and Divider
         description: 
           - Designed, Implemented and Drew Layout with the Cadence Virtuoso on GPDK 45nm for a ALU supporting 5-bit multiplication and 10-bit division and a 2-1 Round-Robin-based Arbiter with Multiple and Divide Request.
-          - Planed, Routed, Simulated and Checked Correctness for all aforementioned components with Cadence Spectre and Mentor Graph Calibre. 
+          - Planned, Routed, Simulated and Checked Correctness for all aforementioned components with Cadence Spectre and Mentor Graph Calibre. 
 
   - title: Leadership and Involvement
     layout: list
@@ -80,7 +80,7 @@ content:
         description: 
           - Managed and Recruited members in Technical Department.
           - Provided technical support to on-campus IT activities, including development and maintenance of school forum, holding CTF competition.
-          - Planed and Organized members to write articles around popular computer-related topics, such as resolution of DNS, anti-phishing, to enrich students' knowledge. 
+          - Planned and Organized members to write articles around popular computer-related topics, such as resolution of DNS, anti-phishing, to enrich students' knowledge. 
 
   - title: Skills
     layout: text

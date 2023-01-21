@@ -72,7 +72,7 @@ docker build -t latex .
 docker run --rm -i -v "$PWD":/data latex make
 ```
 
-Then you are done!
+Then you will get the `template.pdf`!
 
 ### Run Locally
 
