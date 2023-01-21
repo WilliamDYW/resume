@@ -1,0 +1,181 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemOne}[1]{
+  \item\small{#1}
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small{#3} & \small{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textbf{\small#3} & \small{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingNoTitle}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 %\\
+      % \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubSubItem}[1]{\resumeItemOne{#1}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document} \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{\href{}{\Large {Kunlin Han}}}
+& Email: \href{mailto:{hi@iwktd.com}}{{hi@iwktd.com}}\\
+\href{}{} 
+& Mobile : \href{tel:123-456-7890}{123-456-7890} \\
+\end{tabular*}\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+    {University of Southern California (USC)}{Los Angeles, CA}
+    {Master of Electrical Engineering; GPA: 4.0/4.0
+}{Dec. 2021-Dec. 2023}\resumeSubheading
+    {South China Normal University (SCNU)}{Guangzhou, China}
+    {Bachelor of Network Engineering; GPA: 3.78/4.0; Rank: 1/72
+}{Sept. 2017-Jun. 2021}\resumeSubHeadingListEnd
+
+
+
+\section{Skills}
+Programming Languages: Python, C/C++, Verilog, SystemVerilog, Java, Rust, SQL, x86 ASM\\ 
+Libraries: Scrapy, BeautifulSoup, Requests, Django, Flutter\\ 
+Cadence Tools: Virtuoso, Spectre, Xcelium\\ 
+Mentor Graphics Tools: ModelSim, QuestaSim, Calibre\\ 
+Tools: UNIX, Makefile, Xilinx Vivado, Intel Quartus, Git, Docker, PostGIS, ArcGIS\\ 
+
+
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+    {CS Department, USC}{Los Angeles, CA}
+    {Graduate Teaching Assistant}{May 2022-Aug. 2022}\resumeItemListStart
+	\resumeItemOne{Partnered with Prof. Saty Raghavachary as Teaching Assistant (Course Producer) in CSCI-455X Introduction to Programming Systems Design.}
+	\resumeItemOne{Presented Labs to help students to understand the usage and importance of Debugging (GDB) and overview for Computer System.}
+	\resumeItemOne{Held Office Hours to help students with problems in Assignments and Labs.}
+	\resumeItemOne{Proctored and Graded Final Exam with setting clear and fair Rubrics.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubheadingNoTitle
+    {Design and Implementation of 5-stage Pipeline Processor}{Sept. 2022-Oct. 2022}\resumeItemListStart
+	\resumeItemOne{Described Data Path Unit and Control Unit for Single-Cycle CPU with basic MIPS instructions}
+	\resumeItemOne{Resolved problems related to Data Dependency and Early Branching.}
+	\resumeItemOne{Utilized RTL in Verilog and Build 5-stage (IF, ID, EX, ME, WB) Pipeline with encoded control signal, Internal Forwarding Register File, Early Branching and optional support for avoiding delay slot.}
+\resumeItemListEnd
+\resumeSubheadingNoTitle
+    {Full-Custom Design Layout for Arbiter with Multiplier and Divider}{}\resumeItemListStart
+	\resumeItemOne{Designed, Implemented and Drew Layout with the Cadence Virtuoso on GPDK 45nm for a ALU supporting 5-bit multiplication and 10-bit division and a 2-1 Round-Robin-based Arbiter with Multiple and Divide Request.}
+	\resumeItemOne{Planed, Routed, Simulated and Checked Correctness for all aforementioned components with Cadence Spectre and Mentor Graph Calibre.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+
+\section{Leadership and Involvement}
+\resumeSubHeadingListStart
+\resumeSubheading
+    {Hope Center, Reality L.A.}{Los Angeles, CA}
+    {Volunteer}{Mar. 2022-Aug. 2022}\resumeItemListStart
+	\resumeItemOne{Sorted, Organized and Shelved food donations}
+	\resumeItemOne{Managed and Distributed cooked food by collaborating with other volunteers}
+	\resumeItemOne{Coordinated and Helped out in Cleaning utensils}
+\resumeItemListEnd
+\resumeSubheading
+    {Network Club, SCNU}{Guangzhou, China}
+    {Vice President of Technical Department}{Sept. 2017-Jun. 2019}\resumeItemListStart
+	\resumeItemOne{Managed and Recruited members in Technical Department.}
+	\resumeItemOne{Provided technical support to on-campus IT activities, including development and maintenance of school forum, holding CTF competition.}
+	\resumeItemOne{Planed and Organized members to write articles around popular computer-related topics, such as resolution of DNS, anti-phishing, to enrich students' knowledge.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+
+\end{document}
