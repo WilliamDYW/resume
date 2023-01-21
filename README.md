@@ -1,16 +1,9 @@
 # Resume
 > Original Repository: https://github.com/sb2nov/resume
-> Original Files: `original/`
+>
+> Original Repository Files: `original/`
 
 A single-page, one-column resume for general purpose. It uses the base latex templates and fonts to provide ease of use and installation when trying to update the resume. The different sections are clearly documented and custom commands are used to provide consistent formatting. 
-
-## Motivation
-
-I love to use structured format, like Markdown and LaTeX, to present my notes and article. So I choose Sourabh Bajaj's template. And I modified the original template to fit USC's requirements of better resume on VMock. 
-
-Also, I have set up personal resume website: https://www.iwktd.com/ to let others know me comprehensively instead of one-page resume. 
-
-So I have the demand to share the same information across different repository and use YAML as the lanaguage to organize my information. 
 
 ## Preview
 
@@ -20,7 +13,7 @@ So I have the demand to share the same information across different repository a
 
 Difference comparing with original repository: 
 * Use `config.yml` to organize the information to share information across different purpose. 
-* Add extra LaTeX command to suit more applications
+* Add extra LaTeX commands to suit more applications
 * Summarize user-friendly instructions in README
 * Comply with rules from USC recommendations in VMock
     * Bold for job title 
@@ -32,16 +25,16 @@ Difference comparing with original repository:
 
     ![image-20230120153516398](assets/image-20230120153516398.png)
 
-* `\resumeItemOne`: only takes the description instead of skill + description
+* `\resumeItemOne`: only takes the description instead of skill + description, unlike the original repository. 
 
 ### Practical Guide
 
-Refer to [available yaml format](#configyml-format), there are two practical ways to: 
+Refer to [available yaml format](#configyml-format), there are two practical ways to add item/project to a section with `list` as `layout`: 
 
 >   You can DEFINITELY write duration in location's place!
 
-*   Write one with second line![image-20230120221008385](assets/image-20230120221008385.png)
-*   Write one without second line, i.e., job title and duration![image-20230120221102081](assets/image-20230120221102081.png)
+*   Write one with second line by filling all `title`, `location`, `sub_title` and `duration` for that item in the section. ![image-20230120221102081](assets/image-20230120221102081.png)
+*   Write one without second line by filling only these two, i.e.,  `title`, `location` for that item in the section. ![image-20230120233107106](assets/image-20230120233107106.png)
 
 ## How to Use
 
@@ -56,8 +49,9 @@ There are two ways to generate PDF:
         5. You get the `template.pdf`
     * Local machine 
 
-General Steps: 
-1. Refer to [practical guide](#practical-guide) to know the structure and available keys
+### General Steps
+
+1. Refer to [practical guide](#practical-guide) to know the structure and available keys in YAML
 2. Modify `config.yml` accordingly with the help of `template.pdf` 
 3. Compile and get the `template.pdf` from config.yml
 
@@ -69,9 +63,9 @@ This Overleaf template is not yet available. But Sourabh's version is always ava
 
 ### Compile using Docker
 
-> It takes 2GB data to download and more than 5 minutes. 
+> It downloads 2GB data and takes more than 5 minutes. Total size of image is about 4.75GB. 
 
-In this folder, execute the followings in the repository directory: 
+Execute the followings in the repository directory: 
 
 ```sh
 docker build -t latex .
@@ -82,7 +76,7 @@ Then you are done!
 
 ### Run Locally
 
-Requirements: TeX commandline tool, Makefile, python3.5+
+Requirements: TeX commandline tool, Makefile, python3.6+
 
 If you need extra packages, for example in BasicTeX, you have to download the following packages: 
 ```shell
@@ -92,7 +86,15 @@ sudo tlmgr install marvosym
 sudo tlmgr install enumitem
 ```
 
-And then, execute `make`, then you are done!
+And then, execute `make`, then you are all set!
+
+## Motivation
+
+I love to use structured format, like Markdown and LaTeX, to present my notes and article. So I choose Sourabh Bajaj's template. And I modified the original template to fit USC's requirements of better resume on VMock. 
+
+Also, I have set up personal resume website: https://www.iwktd.com/ to let others know me comprehensively instead of one-page resume. 
+
+So I have the demand to share the same information across different repository and use YAML as the lanaguage to organize my information. 
 
 ## License
 
@@ -128,7 +130,7 @@ content:
         location: Location of this title
         # These two are optional, but you have to use both or none
         sub_title: Sub title (eg. Qualification or Job title)(optional)
-        caption: Item caption (eg. Employment or course dates)(optional)
+        duration: Duration for the sub-title, e.g., Aug. 2022-Sept. 2023
 
         # NOT USED. link: Web link (eg. https://sproogen.github.io/modern-resume-theme)(optional)
         description: | # this will include new lines to allow paragraphs
