@@ -48,12 +48,17 @@ Refer to [available yaml format](#configyml-format), there are two practical way
 There are two ways to generate PDF: 
 * Modify Overleaf directly
 * Install TeX commandline tool and Use YAML to maintain content
-    * local machine
-    * In docker
+    * In docker (Easiest to Start)
+        1. Read General Steps
+        2. Refer to [config.yaml format](#configyml-format)
+        3. Modify `config.yaml` accordingly
+        4. Refer to [Compiler using Docker](#compile-using-docker) and RUN
+        5. You get the `template.pdf`
+    * Local machine 
 
-Steps: 
-1. Refer to `config.yml` and [practical guide](#practical-guide)
-2. Modify `config.yml` accordingly
+General Steps: 
+1. Refer to [practical guide](#practical-guide) to know the structure and available keys
+2. Modify `config.yml` accordingly with the help of `template.pdf` 
 3. Compile and get the `template.pdf` from config.yml
 
 Except `make`, please refer to `Makefile` to know other instructions. 
@@ -61,6 +66,19 @@ Except `make`, please refer to `Makefile` to know other instructions.
 ### Overleaf
 
 This Overleaf template is not yet available. But Sourabh's version is always available. Get started quickly using [Overleaf](https://www.overleaf.com/latex/templates/software-engineer-resume/gqxmqsvsbdjf) template.
+
+### Compile using Docker
+
+> It takes 2GB data to download and more than 5 minutes. 
+
+In this folder, execute the followings in the repository directory: 
+
+```sh
+docker build -t latex .
+docker run --rm -i -v "$PWD":/data latex make
+```
+
+Then you are done!
 
 ### Run Locally
 
@@ -75,15 +93,6 @@ sudo tlmgr install enumitem
 ```
 
 And then, execute `make`, then you are done!
-
-### Build using Docker
-
-> It takes 2GB data to download and more than 5 minutes. 
-
-```sh
-docker build -t latex .
-docker run --rm -i -v "$PWD":/data latex make
-```
 
 ## License
 
