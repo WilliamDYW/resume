@@ -35,18 +35,17 @@ content:
         duration: May 2022-Aug. 2022
         link: https://bytes.usc.edu/cs455saty/m22_Coding-Rocks/home/index.html
         description: 
-          - Partnered with Prof. Saty Raghavachary as Teaching Assistant (Course Producer) in CSCI-455X Introduction to Programming Systems Design.
-          - Presented Labs to help students to understand the usage and importance of Debugging (GDB) and overview for Computer System.
-          - Held Office Hours to help students with problems in Assignments and Labs.
-          - Proctored and Graded Final Exam with setting clear and fair Rubrics.
+          - Coordinated with Prof. Saty Raghavachary as teaching assistant (course producer) in CSCI-455X Introduction to Programming Systems Design.
+          - Presented labs to help students to understand the usage and importance of debugging (GDB) and get an overview of Computer Systems.
+          - Held weekly office hours to help students with problems in assignments and labs.
       - show: false
         title: Lab 131, School of Computer Science, SCNU
         location: Los Angeles, CA
         sub_title: Instructor
         duration: Sept. 2018-Jun. 2021
         description: 
-          - Recruited and Communicated members for the Lab
-          - "Organized and Instructed members to study CS topics: Algorithm (CLRS), Linear Algebra (GSLA), Computer System (CSAPP), Computation Theory (ITOC) and Functional Programming (SICP). "
+          - Recruited and manage members for the Lab. 
+          - "Organized and instructed members to study CS topics: Algorithm (CLRS), Linear Algebra (GSLA), Computer System (CSAPP), Computation Theory (ITOC) and Functional Programming (SICP). "
 
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
@@ -54,13 +53,13 @@ content:
       - title: Design and Implementation of 5-stage Pipeline Processor
         location: Sept. 2022-Oct. 2022
         description: 
-          - Described Data Path Unit and Control Unit for Single-Cycle CPU with basic MIPS instructions
+          - Described Data Path Unit and Control Unit for single-cycle CPU with basic MIPS instructions.
           - Resolved problems related to Data Dependency and Early Branching.
-          - Utilized RTL in Verilog and Build 5-stage (IF, ID, EX, ME, WB) Pipeline with encoded control signal, Internal Forwarding Register File, Early Branching and optional support for avoiding delay slot.
-      - title: Full-Custom Design Layout for Arbiter with Multiplier and Divider
+          - Utilized RTL in Verilog and build 5-stage (IF, ID, EX, ME, WB) pipeline with encoded control signal, Internal Forwarding Register File and Early Branching.
+      - title: Full-Custom Design Layout of Arbiter System with Multiplier and Divider
         description: 
-          - Designed, Implemented and Drew Layout with the Cadence Virtuoso on GPDK 45nm for a ALU supporting 5-bit multiplication and 10-bit division and a 2-1 Round-Robin-based Arbiter with Multiple and Divide Request.
-          - Planned, Routed, Simulated and Checked Correctness for all aforementioned components with Cadence Spectre and Mentor Graph Calibre. 
+          - Designed, implemented and drew layout of a ALU supporting 5-bit multiplication and 10-bit division and a 2-1 Round-Robin-based Arbiter with multiply and divide request with the Cadence Virtuoso and GPDK 45nm.
+          - Planned, routed and simulated all aforementioned components with Cadence Virtuoso and Spectre and checked DRC and LVS with Mentor Graphics Calibre. 
 
   - title: Leadership and Involvement
     layout: list
@@ -70,17 +69,17 @@ content:
         sub_title: Volunteer
         duration: Mar. 2022-Aug. 2022
         description: 
-          - Sorted, Organized and Shelved food donations
-          - Managed and Distributed cooked food by collaborating with other volunteers
-          - Coordinated and Helped out in Cleaning utensils
+          - Sorted, organized and shelved food donations for storage to preserve food and accelerate cooking.
+          - Managed and distributed cooked food with other volunteers.
+          - Coordinated and helped out in cleaning utensils after food distribution. 
       - title: Network Club, SCNU
         location: Guangzhou, China
         sub_title: Vice President of Technical Department
         duration: Sept. 2017-Jun. 2019
         description: 
-          - Managed and Recruited members in Technical Department.
-          - Provided technical support to on-campus IT activities, including development and maintenance of school forum, holding CTF competition.
-          - Planned and Organized members to write articles around popular computer-related topics, such as resolution of DNS, anti-phishing, to enrich students' knowledge. 
+          - Managed existing members and held interviews to recruit members for Technical department.
+          - Provided technical supports to on-campus IT activities, including development and maintenance of school forum, holding CTF competition.
+          - Organized members to write articles about popular computer-related topics, such as resolution of DNS, anti-phishing, and published them in social media to enrich students' knowledge. 
 
   - title: Skills
     layout: text
