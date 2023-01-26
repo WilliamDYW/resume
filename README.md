@@ -3,90 +3,71 @@
 >
 > Original Repository Files: `original/`
 
-A single-page, one-column resume for general purpose. It uses the base latex templates and fonts to provide ease of use and installation when trying to update the resume. The different sections are clearly documented and custom commands are used to provide consistent formatting. 
+Original Repository Feature: 
+* A single-page, one-column resume for general purpose.
+* Base latex templates and fonts to provide ease of use.
+
+Difference comparing with original repository: 
+* Summarize user-friendly instructions in README
+* Use `config.yml` to organize the information to share information across different purpose. 
+* Automatically generate the `template.pdf` and `template.png` with GitHub Actions.
+* Add extra LaTeX commands to suit more applications.
+* Comply with rules from USC recommendations in VMock.
+    * Bold for job title.
+    * NO italic for duration.
 
 ## Preview
 
 ![Resume Screenshot](template.png)
 
-## Highlights
-
-Difference comparing with original repository: 
-* Use `config.yml` to organize the information to share information across different purpose. 
-* Add extra LaTeX commands to suit more applications
-* Summarize user-friendly instructions in README
-* Comply with rules from USC recommendations in VMock
-    * Bold for job title 
-    * NO italic for duration
-
-### Extra LaTeX Command
-
-* `\resumeSubheadingNoTitle`: only takes the first line of subheading without job title and duration. 
-
-    ![image-20230120153516398](assets/image-20230120153516398.png)
-
-* `\resumeItemOne`: only takes the description instead of skill + description, unlike the original repository. 
-
-### Practical Guide
-
-Refer to [available yaml format](#configyml-format), there are two practical ways to add item/project to a section with `list` as `layout`: 
-
->   You can DEFINITELY write duration in location's place!
-
-*   Write one with second line by filling all `title`, `location`, `sub_title` and `duration` for that item in the section. ![image-20230120221102081](assets/image-20230120221102081.png)
-*   Write one without second line by filling only these two, i.e.,  `title`, `location` for that item in the section. ![image-20230120233107106](assets/image-20230120233107106.png)
+It will be automatically generated after committing the `config.yml`. 
 
 ## How to Use
-
-There are two ways to generate PDF: 
+There are three/four ways to generate PDF: 
+* GitHub Actions does everything except filling `config.yml` (MOST convenient)
 * Modify Overleaf directly
-* Install TeX commandline tool and Use YAML to maintain content
-    * In docker (Easiest to Start)
-        1. Read General Steps
-        2. Refer to [config.yaml format](#configyml-format)
-        3. Modify `config.yaml` accordingly
-        4. Refer to [Compiler using Docker](#compile-using-docker) and RUN
-        5. You get the `template.pdf`
+* Install TeX command line tool and Use YAML to maintain content
+    * In docker
     * Local machine 
 
-### General Steps
+In this README, I will only present the GitHub Actions method and the others will be in [Methods](./methods.md).
 
-1. Refer to [practical guide](#practical-guide) to know the structure and available keys in YAML
-2. Modify `config.yml` accordingly with the help of `template.pdf` 
-3. Compile and get the `template.pdf` from config.yml
+### GitHub Action
+Steps: 
+1. Fork this repository.
+2. Learn the format of YAML: [Simple Guide](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started).
+3. Read the short [Practical Guide](#practical-guide) for `config.yml` to know the most-used structures.
+4. Refer to [config.yml format](#configyml-format), study the structures by looking at `template.pdf` and `config.yml` side by side. 
+5. Modify `config.yml` with your content and make sure `config.yml` is syntactically correct.
+  * [Online Lint](https://www.yamllint.com/) if you need.
+6. Commit it to the repository. 
+7. ~~Then make a cup of tea.~~ Wait for the GitHub Actions to complete. Link example: https://github.com/Karl-Han/resume/actions
+8. Get the `template.pdf` in the repository! Your new Resume! You are all set!
 
-Except `make`, please refer to `Makefile` to know other instructions. 
+For further reuse, please follow me or refer to [sproogen/modern-resume-theme](https://github.com/sproogen/modern-resume-theme) website. I have [my own website](https://www.iwktd.com/) with this template. 
 
-### Overleaf
+## Practical Guide
+There are hierarchies inside the YAML: 
+* Section (inside a global `content`): comprises 
+  * Items (Experience Section) with `section.layout` = `list`
+  * or a few sentences below it (Skills Section) with `section.layout` = `text`
+* Item (inside a section's `content`): is project or company you have worked on (CS Department, USC under Experience Section or Design and Implementation of 5-stage Pipeline Processor)
+* Item Description (inside an Item's `description`): just a sentence saying what you have done or describe the Item
 
-This Overleaf template is not yet available. But Sourabh's version is always available. Get started quickly using [Overleaf](https://www.overleaf.com/latex/templates/software-engineer-resume/gqxmqsvsbdjf) template.
 
-### Compile using Docker
+### Item
 
-> It downloads 2GB data and takes more than 5 minutes. Total size of image is about 4.75GB. 
+Refer to [available YAML format](#configyml-format), there are two practical ways to add item/project to a section with `list` as `layout`: 
 
-Execute the followings in the repository directory: 
+>   You can DEFINITELY write duration in location's place! What matters most is that how many lines you want to let others know about that project/position.
 
-```sh
-docker build -t latex .
-docker run --rm -i -v "$PWD":/data latex make
-```
+*   Write one with second line by filling all `title`, `location`, `sub_title` and `duration` for that item in the section. ![image-20230120221102081](assets/image-20230120221102081.png)
+*   Write one without second line by filling only these two, i.e., `title`, `location` for that item in the section. ![Image-20230120233107106](assets/image-20230120233107106.png)
 
-Then you will get the `template.pdf`!
+### Re-order the Sections
+If you want to re-order the sections, just look at the [order keyword](#configyml-format). 
 
-### Run Locally
-
-Requirements: TeX commandline tool, Makefile, python3.6+
-
-If you need extra packages, for example in BasicTeX, you have to download the following packages: 
-```shell
-sudo tlmgr install preprint
-sudo tlmgr install titlesec
-sudo tlmgr install marvosym
-sudo tlmgr install enumitem
-```
-
-And then, execute `make`, then you are all set!
+You can see the example in `config.yml`.
 
 ## Motivation
 
@@ -94,22 +75,24 @@ I love to use structured format, like Markdown and LaTeX, to present my notes an
 
 Also, I have set up personal resume website: https://www.iwktd.com/ to let others know me comprehensively instead of one-page resume. 
 
-So I have the demand to share the same information across different repository and use YAML as the lanaguage to organize my information. 
+So I have the demand to share the same information across different repository and use YAML as the language to organize my information. 
+
+Thanks to [Firfi's PR](https://github.com/sb2nov/resume/pull/46), I integrated the GitHub Actions into this repository, so that you no longer need to install the environment or Docker in your computer!
 
 ## License
 
-Format is MIT but all the data is owned by Kunlin Han
+Format is MIT but all the data is owned by Kunlin Han.
 
 ## Acknowledge
 
-This repository is originated from https://github.com/sb2nov/resume . Thank you Sourabh Bajaj for this well organized latex template. For the original files, please refer to `original/` and the original repository. 
+This repository is originated from [sb2nov/resume](https://github.com/sb2nov/resume). Thank Sourabh Bajaj for this well organized latex template. For the original files, please refer to `original/` and the [original repository](https://github.com/sb2nov/resume). 
 
 ## Appendix
 
 ### config.yml format
 Some of them can be replaced with `""` to set them to blank, but it depends. 
 
-Below is a the full list of content options.
+Below is a full list of content options.
 ```yml
 name: Your name
 email: Your email
@@ -126,7 +109,7 @@ content:
     layout: list # (options: list, text)
     content:
       - show: false # (options: true, false)
-        title: Name of item (eg. Company or Project name)
+        title: Item Name (eg. Company or Project name)
         location: Location of this title
         # These two are optional, but you have to use both or none
         sub_title: Sub title (eg. Qualification or Job title)(optional)
@@ -142,3 +125,11 @@ content:
 
       Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
 ```
+
+### Extra LaTeX Command
+
+* `\resumeSubheadingNoTitle`: only takes the first line of subheading without job title and duration. 
+
+    ![image-20230120153516398](assets/image-20230120153516398.png)
+
+* `\resumeItemOne`: only takes the description instead of skill + description, unlike the original repository. 
