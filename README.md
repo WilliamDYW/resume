@@ -2,6 +2,8 @@
 > Original Repository: https://github.com/sb2nov/resume
 >
 > Original Repository Files: `original/`
+> 
+> About me: https://www.iwktd.com/
 
 Original Repository Feature: 
 * A single-page, one-column resume for general purpose.
@@ -15,6 +17,9 @@ Difference comparing with original repository:
 * Comply with rules from USC recommendations in VMock.
     * Bold for job title.
     * NO italic for duration.
+* Modify general information section format to avoid confusion.
+    * Old template results in wrong name on myworkdayjobs.com .
+    * Refer to [`old_version` branch](https://github.com/Karl-Han/resume/tree/old_template).
 
 ## Preview
 
@@ -111,19 +116,19 @@ content:
       - show: false # (options: true, false)
         title: Item Name (eg. Company or Project name)
         location: Location of this title
-        # These two are optional, but you have to use both or none
+        # These two are **optional**, but you have to use both or none
         sub_title: Sub title (eg. Qualification or Job title)(optional)
         duration: Duration for the sub-title, e.g., Aug. 2022-Sept. 2023
 
         # NOT USED. link: Web link (eg. https://sproogen.github.io/modern-resume-theme)(optional)
-        description: | # this will include new lines to allow paragraphs
-          Main content area for the list item.
+        description: # this will include new lines to allow paragraphs
+          - Point1 Main content area for the list item.
+          - Point2 for this Item
   - title: Section Name
-    layout: text (options: list, text)
-    content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
-
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+    layout: text # (options: list, text)
+    content: # this will include new lines to allow paragraphs
+      - Line1 This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+      - Line2 Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
 ```
 
 ### Extra LaTeX Command

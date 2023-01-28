@@ -1,5 +1,6 @@
 import yaml
 import sys
+from urllib.parse import urlsplit
 
 def get_section(section):
     if 'show' in section and section['show'] == False:
@@ -13,9 +14,11 @@ def get_section(section):
 
             subheading = r"""\resumeSubheading
     {%s}{%s}
-    {%s}{%s}"""
+    {%s}{%s}
+"""
             subheading_notitle = r"""\resumeSubheadingNoTitle
-    {%s}{%s}"""
+    {%s}{%s}
+"""
             if 'sub_title' in item:
                 sec += subheading % (item['title'], item['location'], item['sub_title'], item['duration'])
             else:
@@ -39,18 +42,24 @@ def get_section(section):
     return f'{sec}\n\n'
 
 def get_heading(conf):
-    heading = r""" \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-\textbf{\href{%s}{\Large {%s}}}
-& Email: \href{mailto:{%s}}{{%s}}\\
-\href{%s}{%s} 
-& Mobile : \href{tel:%s}{%s} \\
-\end{tabular*}"""
+    heading = r"""\textbf{\href{%s}{\Large {%s}}} \\
+{
+    \href{mailto:{%s}}{{%s}} $|$ \href{%s}{%s} $|$ \href{tel:%s}{%s}
+}
+"""
+
 
     website = conf['website']
+    url = urlsplit(website)
+    website_path = None
+    if url.path == '/':
+        website_path = url.netloc
+    else:
+        website_path = url.netloc + url.path
     name = conf['name']
     email = conf['email']
     phone = conf['phone']
-    return heading % (website, name, email, email, website, website, phone, phone)
+    return heading % (website, name, email, email, website, website_path, phone, phone)
 
 def to_tex(conf):
     tex = ""
