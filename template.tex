@@ -142,25 +142,25 @@
 \section{PROJECTS}
 \resumeSubHeadingListStart
 \resumeSubheadingNoTitle
-    {Tomasulo Out-of-order CPU}{06/2023-08/2023}
+    {Tomasulo Out-of-Order CPU}{06/2023-08/2023}
 \resumeItemListStart
 	\resumeItemOne{Implemented Issue Unit, 2-stage Dispatch Unit, Re-Order Buffer and FPGA-friendly Copy-Free Check Pointing, which restores FRAT with RRAT.}
 	\resumeItemOne{Integrated, synthesized and programmed the overall system on Xilinx Artix-7 FPGA board.}
-	\resumeItemOne{Validated the correctness of design with both simulation and on-ship logic analyzer (Chipscope).}
+	\resumeItemOne{Validated the correctness of design with both simulation and on-chip logic analyzer (Chipscope).}
 \resumeItemListEnd
 \resumeSubheadingNoTitle
     {512-bit 6T SRAM Array Design}{01/2023-05/2023}
 \resumeItemListStart
-	\resumeItemOne{Designed and drew layout of 1-bit SRAM cell, row/column decoders, sense amplifier, write driver, precharge circuit, latch and flip-flop with Cadence Virtuoso and GPDK 45nm.}
+	\resumeItemOne{Designed and drew layout of 1-bit SRAM cell, row/column decoder, sense amplifier, write driver, precharge circuit, latch and flip-flop with Cadence Virtuoso and GPDK 45nm.}
 	\resumeItemOne{Achieved the Read SNM of 210 mV and Write SNM of 395 mV by proper sizing with VDD=1V while minimizing the size of 1-bit SRAM cell.}
 	\resumeItemOne{Integrated components into 4 8x16-bit SRAM banks to construct a 512-bit SRAM Array with the area of 2208 $nm^2$ in 2.6 Ghz (cycle time=0.4 ns).}
 	\resumeItemOne{Measured the power consumption with Spectre, in which the average consumption for reading is 21.2 fJ, the average consumption for writing is 342 fJ and leakage is around 20 fJ.}
-	\resumeItemOne{Validate the functionality of all aforementioned components with vector in Spectre and clear DRC and LVS errors.}
+	\resumeItemOne{Validated the correctness of all aforementioned components with vector file in Spectre and cleared DRC and LVS errors.}
 \resumeItemListEnd
 \resumeSubheadingNoTitle
     {Extensible Asynchronous SNN Accerlator}{01/2023-05/2023}
 \resumeItemListStart
-	\resumeItemOne{Designed extensible asynchronous SSN accelerator in SystemVerilog with SystemVerilogCSP library on a 5x5 filter and 25x25 ifmap with stride=1.}
+	\resumeItemOne{Designed extensible asynchronous SNN accelerator in SystemVerilog with SystemVerilogCSP library on a 5x5 filter and 25x25 ifmap with stride=1.}
 	\resumeItemOne{Implemented fork-join computation module that can calculate part of the overall computation with pre-configured parameter for extensibility.}
 	\resumeItemOne{Integrated computation modules with two memory modules, which contain filter map and ifmap respectively, on a mesh network.}
 	\resumeItemOne{Verified correctness of computation module and the accelerator separately with timestep=2 in QuestaSim.}
@@ -168,8 +168,8 @@
 \resumeSubheadingNoTitle
     {Full-Custom Design Layout of Arbiter System with Multiplier and Divider}{11/2022-12/2022}
 \resumeItemListStart
-	\resumeItemOne{Designed, implemented and drew layout of a ALU supporting 5-bit multiplication and 10-bit division and a 2-1 Round-Robin-based Arbiter with multiply and divide request with the Cadence Virtuoso and GPDK 45nm.}
-	\resumeItemOne{Planned, routed and simulated all aforementioned components with Cadence Virtuoso and Spectre and clear DRC and LVS errors with Mentor Graphics Calibre.}
+	\resumeItemOne{Designed, implemented and drew layout of an ALU supporting 5-bit multiplication and 10-bit division and a 2-1 Round-Robin-based Arbiter with the Cadence Virtuoso and GPDK 45nm.}
+	\resumeItemOne{Planned, routed and simulated all aforementioned components with Cadence Virtuoso and Spectre and cleared DRC and LVS errors with Mentor Graphics Calibre.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 

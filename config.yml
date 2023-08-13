@@ -60,24 +60,24 @@ content:
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
-      - title: Tomasulo Out-of-order CPU
+      - title: Tomasulo Out-of-Order CPU
         location: 06/2023-08/2023
         description: 
           - Implemented Issue Unit, 2-stage Dispatch Unit, Re-Order Buffer and FPGA-friendly Copy-Free Check Pointing, which restores FRAT with RRAT.
           - Integrated, synthesized and programmed the overall system on Xilinx Artix-7 FPGA board.
-          - Validated the correctness of design with both simulation and on-ship logic analyzer (Chipscope).
+          - Validated the correctness of design with both simulation and on-chip logic analyzer (Chipscope).
       - title: 512-bit 6T SRAM Array Design
         location: 01/2023-05/2023
         description: 
-          - Designed and drew layout of 1-bit SRAM cell, row/column decoders, sense amplifier, write driver, precharge circuit, latch and flip-flop with Cadence Virtuoso and GPDK 45nm.
+          - Designed and drew layout of 1-bit SRAM cell, row/column decoder, sense amplifier, write driver, precharge circuit, latch and flip-flop with Cadence Virtuoso and GPDK 45nm.
           - Achieved the Read SNM of 210 mV and Write SNM of 395 mV by proper sizing with VDD=1V while minimizing the size of 1-bit SRAM cell.
           - Integrated components into 4 8x16-bit SRAM banks to construct a 512-bit SRAM Array with the area of 2208 $nm^2$ in 2.6 Ghz (cycle time=0.4 ns).
           - Measured the power consumption with Spectre, in which the average consumption for reading is 21.2 fJ, the average consumption for writing is 342 fJ and leakage is around 20 fJ.
-          - Validate the functionality of all aforementioned components with vector in Spectre and clear DRC and LVS errors.
+          - Validated the correctness of all aforementioned components with vector file in Spectre and cleared DRC and LVS errors.
       - title: Extensible Asynchronous SNN Accerlator
         location: 01/2023-05/2023
         description: 
-          - Designed extensible asynchronous SSN accelerator in SystemVerilog with SystemVerilogCSP library on a 5x5 filter and 25x25 ifmap with stride=1.
+          - Designed extensible asynchronous SNN accelerator in SystemVerilog with SystemVerilogCSP library on a 5x5 filter and 25x25 ifmap with stride=1.
           - Implemented fork-join computation module that can calculate part of the overall computation with pre-configured parameter for extensibility.
           - Integrated computation modules with two memory modules, which contain filter map and ifmap respectively, on a mesh network.
           - Verified correctness of computation module and the accelerator separately with timestep=2 in QuestaSim.
@@ -91,8 +91,8 @@ content:
       - title: Full-Custom Design Layout of Arbiter System with Multiplier and Divider
         location: 11/2022-12/2022
         description: 
-          - Designed, implemented and drew layout of a ALU supporting 5-bit multiplication and 10-bit division and a 2-1 Round-Robin-based Arbiter with multiply and divide request with the Cadence Virtuoso and GPDK 45nm.
-          - Planned, routed and simulated all aforementioned components with Cadence Virtuoso and Spectre and clear DRC and LVS errors with Mentor Graphics Calibre. 
+          - Designed, implemented and drew layout of an ALU supporting 5-bit multiplication and 10-bit division and a 2-1 Round-Robin-based Arbiter with the Cadence Virtuoso and GPDK 45nm.
+          - Planned, routed and simulated all aforementioned components with Cadence Virtuoso and Spectre and cleared DRC and LVS errors with Mentor Graphics Calibre. 
 
   - title: Leadership and Involvement
     layout: list
