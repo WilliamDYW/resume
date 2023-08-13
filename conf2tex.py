@@ -5,7 +5,7 @@ from urllib.parse import urlsplit
 def get_section(section):
     if 'show' in section and section['show'] == False:
         return 
-    sec = f"\\section{{{section['title']}}}\n"
+    sec = f"\\section{{{section['title'].upper()}}}\n"
     if section['layout'] == 'list':
         sec += "\\resumeSubHeadingListStart\n"
         for item in section['content']:
@@ -35,19 +35,23 @@ def get_section(section):
         sec += "\\resumeSubHeadingListEnd\n\n"
     elif section['layout'] == 'text':
         for line in section['content']:
-            (key, value), = line.items()
-            sec += f'{key}: {value}\\\\ \n'
+            if type(line) == str:
+                sec += f'{line}\\\\ \n'
+            else:
+                (key, value), = line.items()
+                sec += f'\\textbf{{{key}}}: {value}\\\\ \n'
     else:
         raise Exception("No 'layout' in the section.")
     return f'{sec}\n\n'
 
 def get_heading(conf):
-    heading = r"""\textbf{\href{%s}{\Large {%s}}} \\
+    heading = r"""\textbf{\href{%s}{\LARGE {%s}}} \\
 {
-    \href{mailto:{%s}}{{%s}} $|$ \href{%s}{%s} $|$ \href{tel:%s}{%s}
-}
-"""
-
+    \href{mailto:{%s}}{{%s}} $|$ \href{%s}{%s}"""
+    if "extra_links" in conf:
+        print(conf['extra_links'])
+        for i in conf['extra_links']:
+            heading += " $|$ \href{{{}}}{{{}}} ".format(list(i.values())[0], list(i.keys())[0])
 
     website = conf['website']
     url = urlsplit(website)
@@ -58,8 +62,11 @@ def get_heading(conf):
         website_path = url.netloc + url.path
     name = conf['name']
     email = conf['email']
-    phone = conf['phone']
-    return heading % (website, name, email, email, website, website_path, phone, phone)
+    if "phone" in conf:
+        phone = conf['phone']
+        heading += " $|$ \href{tel:{{}}}{{{}}}".format(phone, phone)
+    heading += "\n}"
+    return heading % (website, name, email, email, website, website_path)
 
 def to_tex(conf):
     tex = ""
