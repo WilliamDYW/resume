@@ -1,18 +1,13 @@
 # Personal info
-name: Kunlin Han
-email: kunlinha@usc.edu
+name: Dongyang Wu
+email: wudongya@usc.edu
 # phone: 123-456-7890
-website: https://www.linkedin.com/in/kunlinhan/
-extra_links:
-  - Github (Karl-Han): https://github.com/Karl-Han
-  - Personal Website: https://www.iwktd.com/
+website: https://www.linkedin.com/in/william-wu-dongyang/
 
 order:
   - Education
   - Skills
-  - Experience
   - Projects
-  - Leadership and Involvement
 
 content:
   - title: Summary
@@ -22,6 +17,7 @@ content:
       - Self-motivated and problem-solving student working on UVM-based testbench for functional digital verification and OpenSPARC T1 for computer architecture design. 
       - Participated proactively in courses and organized study groups. Passionate about building bonds with local community. 
       - Eager to join $<company>$ as $<title>$ to contribute to $<company's benefit>$.
+
   - title: Education
     layout: list
     content:
@@ -29,33 +25,12 @@ content:
         location: Los Angeles, CA
         sub_title: |
           Master of Electrical Engineering; GPA: 4.0/4.0
-        duration: 12/2021-12/2023
-      - title: South China Normal University (SCNU)
-        location: Guangzhou, China
+        duration: 08/2022-05/2024
+      - title: The Chinese University of Hong Kong, Shenzhen (CUHKSZ)
+        location: Shenzhen, China
         sub_title: |
-          Bachelor of Network Engineering; GPA: 3.78/4.0; Rank: 1/72
-        duration: 09/2017-06/2021
-
-  - title: Experience
-    layout: list
-    content:
-      - title: CS Department, USC
-        location: Los Angeles, CA
-        sub_title: Graduate Teaching Assistant
-        duration: 05/2022-08/2022
-        link: https://bytes.usc.edu/cs455saty/m22_Coding-Rocks/home/index.html
-        # description: 
-        #   - Coordinated with Prof. Saty Raghavachary as teaching assistant (course producer) in CSCI-455X Introduction to Programming Systems Design.
-        #   - Presented labs to help students to understand the usage and importance of debugging (GDB) and get an overview of Computer Systems.
-        #   - Held weekly office hours to help students with problems in assignments and labs.
-      - show: false
-        title: Lab 131, School of Computer Science, SCNU
-        location: Los Angeles, CA
-        sub_title: Instructor
-        duration: 09/2018-06/2021
-        # description: 
-        #   - Recruited and manage members for the Lab. 
-        #   - "Organized and instructed members to study CS topics: Algorithm (CLRS), Linear Algebra (GSLA), Computer System (CSAPP), Computation Theory (ITOC) and Functional Programming (SICP). "
+          Bachelor of Computer Science and Engineering; GPA: 3.4/4.0
+        duration: 09/2018-06/2022
 
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
@@ -63,9 +38,14 @@ content:
       - title: Tomasulo Out-of-Order CPU
         location: 06/2023-08/2023
         description: 
-          - Implemented Issue Unit, 2-stage Dispatch Unit, Re-Order Buffer and FPGA-friendly Copy-Free Check Pointing, which restores FRAT with RRAT.
-          - Integrated, synthesized and programmed the overall system on Xilinx Artix-7 FPGA board.
-          - Validated the correctness of design with both simulation and on-chip logic analyzer (Chipscope).
+          - Designed CPU with Out-of-Order Execution and In-order Commitment.
+          - Implemented Branch Prediction Buffer(BPB) and Return Stack Address(RAS) for speculative execution beyond branches.
+          - Implemented BRAM-based Copy Free Check-pointing(CFC) with RRAT for recovery from path misprediction.
+          - Implemented Store Buffer(SB), Store Address Buffer(SAB), Reorder Buffer(ROB), 2-stage Dispatch Unit, Free Register List(FRL) and Issue Unit(IU).
+      - title: PCIe Physical Layer Design
+        location: 06/2023-08/2023
+        description: 
+          - 
       - title: 512-bit 6T SRAM Array Design
         location: 01/2023-05/2023
         description: 
@@ -88,38 +68,11 @@ content:
           - Described Data Path Unit and Control Unit for single-cycle CPU with basic MIPS instructions.
           - Resolved problems related to Data Dependency and Early Branching.
           - Utilized Verilog to build 5-stage pipeline with encoded control signal, Internal Forwarding Register File and Early Branching.
-      - title: Full-Custom Design Layout of Arbiter System with Multiplier and Divider
-        location: 11/2022-12/2022
-        description: 
-          - Designed, implemented and drew layout of an ALU supporting 5-bit multiplication and 10-bit division and a 2-1 Round-Robin-based Arbiter with the Cadence Virtuoso and GPDK 45nm.
-          - Planned, routed and simulated all aforementioned components with Cadence Virtuoso and Spectre and cleared DRC and LVS errors with Mentor Graphics Calibre. 
-
-  - title: Leadership and Involvement
-    layout: list
-    content: 
-      - title: Hope Center, Reality L.A.
-        location: Los Angeles, CA
-        sub_title: Volunteer
-        duration: 03/2022-08/2022
-        # description: 
-        #   - Sorted, organized and shelved food donations for storage to preserve food and accelerate cooking.
-        #   - Managed and distributed cooked food with other volunteers.
-        #   - Coordinated and collaborated in cleaning utensils after food distribution. 
-      - title: Network Club, SCNU
-        location: Guangzhou, China
-        sub_title: Vice President of Technical Department
-        duration: 09/2017-06/2019
-        # description: 
-        #   - Managed existing members and held interviews to recruit members for Technical department.
-        #   - Provided technical supports to on-campus IT activities, including development and maintenance of school forum, holding CTF competition.
-        #   - Organized members to write articles about popular computer-related topics, such as resolution of DNS, anti-phishing, and published them in social media to enrich students' knowledge. 
 
   - title: Skills
     layout: text
     content: 
-      - Programming Languages: Python, C/C++, Verilog, VHDL, SystemVerilog, Java, Rust, SQL, x86 ASM
-      - Libraries: Scrapy, BeautifulSoup, Requests, Pyrogram, Django
-      # - Cadence Tools: Virtuoso, Spectre
-      # - Mentor Graphics Tools: ModelSim, QuestaSim, Calibre
-      - EDA Tools: Virtuoso, Spectre, QuestaSim, Calibre, Intel Quartus, Xilinx Vivado
-      - Protocols: AXI, PCIe, MOESI \hspace{\fill} \textbf{Tools:} UNIX, Linux, VIM, Git, Docker, Makefile
+      - Programming Languages: Python, C/C++, Verilog, VHDL, SQL, MIPS
+      - EDA Tools: Virtuoso, QuestaSim, Xilinx Vivado
+      - Protocols: TCP/IP, USB, SPI, AXI, PCIe, MOESI
+      - Tools: UNIX, Linux, Git, Makefile, CUDA
