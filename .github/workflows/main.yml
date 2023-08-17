@@ -1,0 +1,25 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: 
+      - '*'
+
+jobs:
+  compile:
+    name: Compile resume pdf
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3.3.0
+      - name: Run the build process with Docker
+        uses: addnab/docker-run-action@v3
+        with:
+          image: han981220/resume-image:latest
+          options: -v ${{ github.workspace }}:/data
+          run: |
+            cd /data
+            make
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Built latest pdf for the repository
