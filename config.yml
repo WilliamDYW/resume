@@ -26,7 +26,7 @@ content:
         sub_title: |
           Master of Electrical Engineering; GPA: 4.0/4.0
         duration: 08/2022-05/2024
-        description: "Course: Digital System Design (EE560), Computer Systems Architecture (EE557), MOS VLSI Circuit Design (EE477), Computer systems Organization (EE457), Introduction to Computer Networks (EE450)"
+        description: 'Course: Digital System Design (EE560), Computer Systems Architecture (EE557), MOS VLSI Circuit Design (EE477), Computer systems Organization (EE457), Introduction to Computer Networks (EE450)'
       - title: The Chinese University of Hong Kong, Shenzhen (CUHKSZ)
         location: Shenzhen, China
         sub_title: |
