@@ -7,13 +7,14 @@ website: https://www.linkedin.com/in/william-wu-dongyang/
 order:
   - Education
   - Skills
+  - Experience
   - Projects
 
 content:
   - title: Summary
     layout: text
     content: 
-      - Proactive learner who changed Master's degree from Computer Science to Electrical Engineering at USC (GPA 4.0).
+      - Proactive learner who changed Master's major from Computer Science to Electrical Engineering (GPA 4.0).
       - Self-motivated and problem-solving student working on UVM-based testbench for functional digital verification and OpenSPARC T1 for computer architecture design. 
       - Participated proactively in courses and organized study groups. Passionate about building bonds with local community. 
       - Eager to join $<company>$ as $<title>$ to contribute to $<company's benefit>$.
@@ -27,7 +28,7 @@ content:
           Master of Electrical Engineering; GPA: 4.0/4.0
         duration: 08/2022-05/2024
         description: 
-          - "Courses: Digital System Design (EE560), Computer Systems Architecture (EE557), MOS VLSI Circuit Design (EE477), Computer Systems Organization (EE457), Introduction to Computer Networks (EE450)"
+          - "Courses: Computer Aided Design of Digital Systems I (EE680), Complex Digital ASIC System Design (EE599), Digital System Design (EE560), Computer Systems Architecture (EE557), MOS VLSI Circuit Design (EE477), Computer Systems Organization (EE457), Introduction to Computer Networks (EE450)"
           - Added to the MS Honors Program
       - title: The Chinese University of Hong Kong, Shenzhen (CUHKSZ)
         location: Shenzhen, China
@@ -36,7 +37,19 @@ content:
         duration: 09/2018-06/2022
         description: 
           - "Courses: Computer Architecture, Parallel Computing, Operating Systems, Compiler Construction, Microprocessors and Computer Systems, Design and Analysis of Algorithms"
-
+          
+  - title: Experience
+    layout: list
+    content:
+      - title: University of Southern California (USC)
+        location: Los Angeles, CA
+        sub_title: Visiting Intern
+        duration: 09/2021-08/2022
+        description: 
+          - Read papers about point clouds.
+          - Operated microprocessor-based robotic arms, and wrote programs in combined C++ and Python about inverse kinematics.
+          - Reproduced results of papers using CUDA-based OpenCV.
+          
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
@@ -81,5 +94,5 @@ content:
       - Programming Languages: Python, C/C++, Verilog, VHDL, SQL, MIPS
       - EDA Tools: Virtuoso, QuestaSim, Xilinx Vivado
       - Protocols: TCP/IP, USB, SPI, AXI, PCIe, MOESI
-      - Tools: UNIX, Linux, Git, Makefile, CUDA, MPI, pthreads
+      - Tools: UNIX, Linux, Git, Makefile, CMake, CUDA, MPI, pthreads
       
