@@ -106,37 +106,28 @@
 
 
 \begin{document}
-\textbf{\href{https://www.linkedin.com/in/kunlinhan/}{\LARGE {Kunlin Han}}} \\
+\textbf{\href{https://www.linkedin.com/in/william-wu-dongyang/}{\LARGE {Dongyang Wu}}} \\
 {
-    \href{mailto:{kunlinha@usc.edu}}{{kunlinha@usc.edu}} $|$ \href{https://www.linkedin.com/in/kunlinhan/}{www.linkedin.com/in/kunlinhan/} $|$ \href{https://github.com/Karl-Han}{Github (Karl-Han)}  $|$ \href{https://www.iwktd.com/}{Personal Website} 
+    \href{mailto:{wudongya@usc.edu}}{{wudongya@usc.edu}} $|$ \href{https://www.linkedin.com/in/william-wu-dongyang/}{www.linkedin.com/in/william-wu-dongyang/}
 }\section{EDUCATION}
 \resumeSubHeadingListStart
 \resumeSubheading
     {University of Southern California (USC)}{Los Angeles, CA}
     {Master of Electrical Engineering; GPA: 4.0/4.0
-}{12/2021-12/2023}
+}{08/2022-05/2024}
 \resumeSubheading
-    {South China Normal University (SCNU)}{Guangzhou, China}
-    {Bachelor of Network Engineering; GPA: 3.78/4.0; Rank: 1/72
-}{09/2017-06/2021}
+    {The Chinese University of Hong Kong, Shenzhen (CUHKSZ)}{Shenzhen, China}
+    {Bachelor of Computer Science and Engineering; GPA: 3.4/4.0
+}{09/2018-06/2022}
 \resumeSubHeadingListEnd
 
 
 
 \section{SKILLS}
-\textbf{Programming Languages}: Python, C/C++, Verilog, VHDL, SystemVerilog, Java, Rust, SQL, x86 ASM\\ 
-\textbf{Libraries}: Scrapy, BeautifulSoup, Requests, Pyrogram, Django\\ 
-\textbf{EDA Tools}: Virtuoso, Spectre, QuestaSim, Calibre, Intel Quartus, Xilinx Vivado\\ 
-\textbf{Protocols}: AXI, PCIe, MOESI \hspace{\fill} \textbf{Tools:} UNIX, Linux, VIM, Git, Docker, Makefile\\ 
-
-
-\section{EXPERIENCE}
-\resumeSubHeadingListStart
-\resumeSubheading
-    {CS Department, USC}{Los Angeles, CA}
-    {Graduate Teaching Assistant}{05/2022-08/2022}
-\resumeSubHeadingListEnd
-
+\textbf{Programming Languages}: Python, C/C++, Verilog, VHDL, SQL, MIPS\\ 
+\textbf{EDA Tools}: Virtuoso, QuestaSim, Xilinx Vivado\\ 
+\textbf{Protocols}: TCP/IP, USB, SPI, AXI, PCIe, MOESI\\ 
+\textbf{Tools}: UNIX, Linux, Git, Makefile, CUDA\\ 
 
 
 \section{PROJECTS}
@@ -144,9 +135,17 @@
 \resumeSubheadingNoTitle
     {Tomasulo Out-of-Order CPU}{06/2023-08/2023}
 \resumeItemListStart
-	\resumeItemOne{Implemented Issue Unit, 2-stage Dispatch Unit, Re-Order Buffer and FPGA-friendly Copy-Free Check Pointing, which restores FRAT with RRAT.}
-	\resumeItemOne{Integrated, synthesized and programmed the overall system on Xilinx Artix-7 FPGA board.}
-	\resumeItemOne{Validated the correctness of design with both simulation and on-chip logic analyzer (Chipscope).}
+	\resumeItemOne{Designed CPU with Out-of-Order Execution and In-order Commitment.}
+	\resumeItemOne{Implemented Branch Prediction Buffer(BPB) and Return Stack Address(RAS) for speculative execution beyond branches.}
+	\resumeItemOne{Implemented BRAM-based Copy Free Check-pointing(CFC) with RRAT for recovery from path misprediction.}
+	\resumeItemOne{Implemented Store Buffer(SB), Store Address Buffer(SAB), Reorder Buffer(ROB), 2-stage Dispatch Unit, Free Register List(FRL) and Issue Unit(IU).}
+\resumeItemListEnd
+\resumeSubheadingNoTitle
+    {PCIe Physical Layer Design}{06/2023-08/2023}
+\resumeItemListStart
+	\resumeItemOne{Designed physical layer components for PCIe 2-lane system.}
+	\resumeItemOne{Implemented Elastic Buffer with Primed Method to achieve Clock Domain Crossing by adjusting Skip Ordered Set.}
+	\resumeItemOne{Implemented Deskew Buffer to eliminate skew between lanes.}
 \resumeItemListEnd
 \resumeSubheadingNoTitle
     {512-bit 6T SRAM Array Design}{01/2023-05/2023}
@@ -165,24 +164,6 @@
 	\resumeItemOne{Integrated computation modules with two memory modules, which contain filter map and ifmap respectively, on a mesh network.}
 	\resumeItemOne{Verified correctness of computation module and the accelerator separately with timestep=2 in QuestaSim.}
 \resumeItemListEnd
-\resumeSubheadingNoTitle
-    {Full-Custom Design Layout of Arbiter System with Multiplier and Divider}{11/2022-12/2022}
-\resumeItemListStart
-	\resumeItemOne{Designed, implemented and drew layout of an ALU supporting 5-bit multiplication and 10-bit division and a 2-1 Round-Robin-based Arbiter with the Cadence Virtuoso and GPDK 45nm.}
-	\resumeItemOne{Planned, routed and simulated all aforementioned components with Cadence Virtuoso and Spectre and cleared DRC and LVS errors with Mentor Graphics Calibre.}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
-
-
-\section{LEADERSHIP AND INVOLVEMENT}
-\resumeSubHeadingListStart
-\resumeSubheading
-    {Hope Center, Reality L.A.}{Los Angeles, CA}
-    {Volunteer}{03/2022-08/2022}
-\resumeSubheading
-    {Network Club, SCNU}{Guangzhou, China}
-    {Vice President of Technical Department}{09/2017-06/2019}
 \resumeSubHeadingListEnd
 
 
