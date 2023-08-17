@@ -26,7 +26,8 @@ content:
         sub_title: |
           Master of Electrical Engineering; GPA: 4.0/4.0
         duration: 08/2022-05/2024
-        description: Course":" Digital System Design (EE560), Computer Systems Architecture (EE557), MOS VLSI Circuit Design (EE477), Computer systems Organization (EE457), Introduction to Computer Networks (EE450)
+        description: |
+          Courses":" Digital System Design (EE560), Computer Systems Architecture (EE557), MOS VLSI Circuit Design (EE477), Computer systems Organization (EE457), Introduction to Computer Networks (EE450)
       - title: The Chinese University of Hong Kong, Shenzhen (CUHKSZ)
         location: Shenzhen, China
         sub_title: |
@@ -54,7 +55,7 @@ content:
         description: 
           - Designed basic combinational and sequential circuits using Cadence Virtuoso.
           - Accounted for 20-bit mux unit, 20-bit Han-Carlson adder unit 20-bit register Schematic and Layout design work
-          - Integrated components using wave pipeline with the area of 5.96 $mm^2$ in 2.0 Ghz (cycle time=0.5 ns).
+          - Integrated components using wave pipeline with the area of 5.96 $mm^2$ in 2.0 GHz (cycle time=0.5 ns).
           - Validated the correctness of all aforementioned components with vector file and cleared DRC and LVS errors.
       - show: false
         title: 5-stage Pipeline MIPS Processor
