@@ -45,7 +45,9 @@ content:
       - title: PCIe Physical Layer Design
         location: 06/2023-08/2023
         description: 
-          - 
+          - Designed physical layer components for PCIe 2-lane system.
+          - Implemented Elastic Buffer with Primed Method to achieve Clock Domain Crossing by adjusting Skip Ordered Set.
+          - Implemented Deskew Buffer to eliminate skew between lanes.
       - title: 512-bit 6T SRAM Array Design
         location: 01/2023-05/2023
         description: 
